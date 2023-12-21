@@ -11,6 +11,9 @@ export default {
       },
       colors: {
         text_color: 'rgba(255, 255, 255, 0.92);'
+      },
+      flex: {
+        '1.3': '1.3'
       }
     },
   },

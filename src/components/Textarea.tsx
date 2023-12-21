@@ -2,7 +2,7 @@ import { useState } from "react";
 import Warning from "./Warning"
 import { FACEBOOK_MAX_CHARACTERS, INSTAGRAM_MAX_CHARACTERS } from "../lib/constant";
 
-const Textarea = ({setStats}: any) => {
+const Textarea = ({ setStats }: any) => {
   const [text, setText] = useState("");
   const [warning, setWarning] = useState("");
 
@@ -28,15 +28,16 @@ const Textarea = ({setStats}: any) => {
     });
   };
   return (
-   <section className="bg">
-    <textarea
+    <section className="resize-none md:w-1/2 flex-2 font-inherit p-8 text-lg py-[30px] px-[40px]">
+      <textarea
         spellCheck="false"
         placeholder="Enter your text"
         onChange={handleChange}
         value={text}
+        className=" placeholder:font-medium placeholder:gray-500 h-full w-full"
       ></textarea>
-       <Warning warningText={warning} />
-   </section>
+      <Warning warningText={warning} />
+    </section>
   )
 }
 

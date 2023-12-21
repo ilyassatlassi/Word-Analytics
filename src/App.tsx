@@ -1,6 +1,6 @@
-import Footer from "./Footer"
-import Header from "./Header"
-import Container from "./Container"
+import Footer from "./components/Footer"
+import Header from "./components/Header"
+import Container from "./components/Container"
 
 
 function App() {
@@ -8,7 +8,9 @@ function App() {
   return (
     <>
     <Header/>
-    <Container/>
+   <div className="p-5">
+     <Container/>
+   </div>
     <Footer/>
     </>
   )

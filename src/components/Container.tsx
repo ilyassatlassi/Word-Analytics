@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Stats from "./components/Stats"
-import Textarea from "./components/Textarea"
+import Stats from "./Stats"
+import Textarea from "./Textarea"
 
 const Container = () => {
   const [stats, setStats] = useState({
@@ -9,8 +9,9 @@ const Container = () => {
     instagramCharactersLeft: 280,
     facebookCharactersLeft: 2200,
   });
+  
   return (
-    <main className="max-w-5xl h-[520px] bg-white rounded-xl shadow-md mt-[55px] flex overflow-hidden relative">
+    <main className="max-w-5xl h-[520px] bg-white rounded-xl shadow-md mt-[55px] flex md:flex-row flex-col overflow-hidden relative">
        <Textarea setStats={setStats}/>
        <Stats stats={stats}/>
     </main>
